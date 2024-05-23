@@ -1,0 +1,19 @@
+version: 2
+models: 
+  - name: fact_sales
+    columns: 
+      - name: supplier_id
+        tests:
+          - relationships:
+              field: supplier_id
+              to: ref('dim_supplier')
+      - name: customer_id
+        tests:
+          - relationships:
+              field: customer_id
+              to: ref('dim_customer')
+      - name: part_id
+        tests:
+          - relationships:
+              field: part_id
+              to: ref('dim_part')
