@@ -1,0 +1,62 @@
+version: 2
+sources:
+  - name: retail_system
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: customer
+        columns:
+          - name: c_custkey
+            tests:
+              - not_null
+              - unique
+          - name: c_nationkey
+            tests:
+              - not_null 
+      - name: lineitem
+        columns:
+          - name: l_orderkey
+            tests:
+              - not_null 
+          - name: l_partkey
+            tests:
+              - not_null
+          - name: l_suppkey
+              - not_null  
+      - name: nation
+        columns:
+          - name: n_nationkey
+            tests:
+              - not_null
+              - unique
+          - name: n_regionkey
+            tests: 
+              - not_null    
+      - name: orders
+        columns:
+          - name: o_orderkey
+            tests:
+              - not_null
+              - unique
+          - name: o_custkey
+            tests:
+              - not_null
+      - name: part
+        columns:
+          - name: p_partkey
+            tests:
+              - not_null
+              - unique
+      - name: partsupp
+      - name: region
+        columns:
+          - name: r_regionkey
+            tests:
+              - not_null
+              - unique
+      - name: supplier
+        columns:
+          - name: s_suppkey
+            tests:
+              - not_null
+              - unique
