@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dim_customer
+    tests:
+      - elementary.dimension_anomalies:
+          time_bucket:
+            period: day
+            count: 1
+          sensitivity: 3
+          days_back: 2
+          backfill_days: 2
+          timestamp_column: c_acctbal
+          dimensions:
+            - c_custkey
+          config:
+            severity: error
+          meta:
+            description: Checking for anomalies in the values distribution of the
+              c_acctbal column by looking at a 1 days period and comparing it to the
+              last 2 days
