@@ -1,8 +1,8 @@
 version: 2
 sources:
   - name: retail_system
-    database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCH_SF1
+    database: RETAIL #SNOWFLAKE_SAMPLE_DATA
+    schema: SOURCE_DATA
     tables:
       - name: customer
         columns:
@@ -10,6 +10,9 @@ sources:
             tests:
               - not_null
               - unique
+          - name: c_name
+            tests:
+              - not_null
           - name: c_nationkey
             tests:
               - not_null 

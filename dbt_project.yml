@@ -49,5 +49,5 @@ models:
       +materialized: table
       +schema: MART
     elementary:
-      +schema: elementary
+      schema: elementary
 
