@@ -1,15 +1,13 @@
-Welcome to your new dbt project!
+### Retail Warehouse Model
+------------------------
+This is a basic ELT model using DBT and implementing data observability with elementary-data.
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-
+### 📋 Built With
+- Snowflake
+- DBT
+- elementary-data
+- 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- How to set up elemtary data - https://github.com/elementary-data/dbt-data-reliability
+- My article on data observability here
