@@ -6,4 +6,4 @@ packages:
   - package: calogica/dbt_date
     version: 0.9.1
   - package: elementary-data/elementary
-    version: 0.12.0 
+    version: 0.15.2
